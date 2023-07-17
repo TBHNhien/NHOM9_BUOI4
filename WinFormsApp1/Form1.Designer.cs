@@ -52,8 +52,9 @@
             label7 = new Label();
             dtp_DateOfBirth = new DateTimePicker();
             datagridsinhvien = new DataGridView();
-            dtbten = new DataGridViewTextBoxColumn();
             dtbid = new DataGridViewTextBoxColumn();
+            dtbten = new DataGridViewTextBoxColumn();
+            NGAYSINH = new DataGridViewTextBoxColumn();
             dtbdiem = new DataGridViewTextBoxColumn();
             dtblop = new DataGridViewTextBoxColumn();
             dtbkhoa = new DataGridViewTextBoxColumn();
@@ -257,7 +258,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             datagridsinhvien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             datagridsinhvien.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            datagridsinhvien.Columns.AddRange(new DataGridViewColumn[] { dtbten, dtbid, dtbdiem, dtblop, dtbkhoa });
+            datagridsinhvien.Columns.AddRange(new DataGridViewColumn[] { dtbid, dtbten, NGAYSINH, dtbdiem, dtblop, dtbkhoa });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.Window;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -284,6 +285,15 @@
             datagridsinhvien.CellContentClick += datagridsinhvien_CellContentClick;
             datagridsinhvien.SelectionChanged += datagridsinhvien_SelectionChanged;
             // 
+            // dtbid
+            // 
+            dtbid.DataPropertyName = "dtbid";
+            dtbid.FillWeight = 200F;
+            dtbid.HeaderText = "Mã sinh viên";
+            dtbid.MinimumWidth = 6;
+            dtbid.Name = "dtbid";
+            dtbid.Width = 200;
+            // 
             // dtbten
             // 
             dtbten.DataPropertyName = "dtbtensv";
@@ -293,14 +303,12 @@
             dtbten.Name = "dtbten";
             dtbten.Width = 200;
             // 
-            // dtbid
+            // NGAYSINH
             // 
-            dtbid.DataPropertyName = "dtbid";
-            dtbid.FillWeight = 200F;
-            dtbid.HeaderText = "Mã sinh viên";
-            dtbid.MinimumWidth = 6;
-            dtbid.Name = "dtbid";
-            dtbid.Width = 200;
+            NGAYSINH.HeaderText = "NGAYSINH";
+            NGAYSINH.MinimumWidth = 6;
+            NGAYSINH.Name = "NGAYSINH";
+            NGAYSINH.Width = 125;
             // 
             // dtbdiem
             // 
@@ -385,8 +393,9 @@
         private Label label7;
         private DateTimePicker dtp_DateOfBirth;
         private DataGridView datagridsinhvien;
-        private DataGridViewTextBoxColumn dtbten;
         private DataGridViewTextBoxColumn dtbid;
+        private DataGridViewTextBoxColumn dtbten;
+        private DataGridViewTextBoxColumn NGAYSINH;
         private DataGridViewTextBoxColumn dtbdiem;
         private DataGridViewTextBoxColumn dtblop;
         private DataGridViewTextBoxColumn dtbkhoa;

@@ -1,0 +1,11 @@
+C:\Users\Admin\Desktop\Lap_Trinh_Moi_Truong_Window\NHOM9_BUOI4\themdata_dtgv\themdata_dtgv\bin\Debug\themdata_dtgv.exe.config
+C:\Users\Admin\Desktop\Lap_Trinh_Moi_Truong_Window\NHOM9_BUOI4\themdata_dtgv\themdata_dtgv\bin\Debug\themdata_dtgv.exe
+C:\Users\Admin\Desktop\Lap_Trinh_Moi_Truong_Window\NHOM9_BUOI4\themdata_dtgv\themdata_dtgv\bin\Debug\themdata_dtgv.pdb
+C:\Users\Admin\Desktop\Lap_Trinh_Moi_Truong_Window\NHOM9_BUOI4\themdata_dtgv\themdata_dtgv\obj\Debug\themdata_dtgv.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Lap_Trinh_Moi_Truong_Window\NHOM9_BUOI4\themdata_dtgv\themdata_dtgv\obj\Debug\themdata_dtgv.csproj.SuggestedBindingRedirects.cache
+C:\Users\Admin\Desktop\Lap_Trinh_Moi_Truong_Window\NHOM9_BUOI4\themdata_dtgv\themdata_dtgv\obj\Debug\themdata_dtgv.Form1.resources
+C:\Users\Admin\Desktop\Lap_Trinh_Moi_Truong_Window\NHOM9_BUOI4\themdata_dtgv\themdata_dtgv\obj\Debug\themdata_dtgv.Properties.Resources.resources
+C:\Users\Admin\Desktop\Lap_Trinh_Moi_Truong_Window\NHOM9_BUOI4\themdata_dtgv\themdata_dtgv\obj\Debug\themdata_dtgv.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\Lap_Trinh_Moi_Truong_Window\NHOM9_BUOI4\themdata_dtgv\themdata_dtgv\obj\Debug\themdata_dtgv.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Lap_Trinh_Moi_Truong_Window\NHOM9_BUOI4\themdata_dtgv\themdata_dtgv\obj\Debug\themdata_dtgv.exe
+C:\Users\Admin\Desktop\Lap_Trinh_Moi_Truong_Window\NHOM9_BUOI4\themdata_dtgv\themdata_dtgv\obj\Debug\themdata_dtgv.pdb

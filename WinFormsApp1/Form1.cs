@@ -1,8 +1,8 @@
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Linq;
-
+using System.Text;
 
 namespace WinFormsApp1
 {
@@ -21,6 +21,13 @@ namespace WinFormsApp1
         {
             khoacontrol();
             dtSV = creatable();
+
+            // Thêm dữ liệu vào DataGridView
+            datagridsinhvien.Rows.Add("SV0001", "Trần Văn Nam","20/8/1985 12:00:00SA",  "7", "CNTT1", "20/08/1985");
+            datagridsinhvien.Rows.Add("SV0002","Nguyễn Thị Hằng", "25/8/1986 12:00:00SA",  "8", "Kinh tế2", "15/03/1990");
+            datagridsinhvien.Rows.Add("SV0003", "Lê Minh Đức", "21/3/1984 12:00:00SA",  "9", "CNTT3", "05/11/1992");
+
+
 
         }
         public void khoacontrol()
@@ -54,6 +61,16 @@ namespace WinFormsApp1
             btnadd.Focus();
 
 
+        }
+
+        public List<SINHVIEN> TaoDuLieu()
+        {
+            //Console.InputEncoding = Encoding.UTF8;
+            //Console.OutputEncoding = Encoding.UTF8;
+            List<SINHVIEN> ds = new List<SINHVIEN>();
+            ds.Add(new SINHVIEN() { MASV = "SV0001", HOTEN = "Trần Văn Nam", NGAYSINH = "20/08/1985 12:00:00SA", KHOA = "CNTT" });
+
+            return ds;
         }
 
         private void btnadd_Click(object sender, EventArgs e)
