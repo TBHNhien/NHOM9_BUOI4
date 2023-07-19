@@ -41,9 +41,11 @@
             this.txbDiem = new System.Windows.Forms.TextBox();
             this.txbKhoa = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btn_RESET = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -157,46 +159,70 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(317, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 16);
+            this.label1.Size = new System.Drawing.Size(0, 16);
             this.label1.TabIndex = 13;
-            this.label1.Text = "1/1";
             this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(174, 345);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 48);
+            this.btnAdd.TabIndex = 14;
+            this.btnAdd.Text = "THÊM";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(280, 345);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 48);
+            this.btnDelete.TabIndex = 15;
+            this.btnDelete.Text = "XÓA";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(377, 345);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 48);
+            this.btnEdit.TabIndex = 16;
+            this.btnEdit.Text = "SỬA";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btn_RESET
+            // 
+            this.btn_RESET.Location = new System.Drawing.Point(475, 102);
+            this.btn_RESET.Name = "btn_RESET";
+            this.btn_RESET.Size = new System.Drawing.Size(98, 48);
+            this.btn_RESET.TabIndex = 17;
+            this.btn_RESET.Text = "RESET";
+            this.btn_RESET.UseVisualStyleBackColor = true;
+            this.btn_RESET.Click += new System.EventHandler(this.btn_RESET_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(174, 345);
+            this.button5.Location = new System.Drawing.Point(475, 192);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 48);
-            this.button5.TabIndex = 14;
-            this.button5.Text = "THÊM";
+            this.button5.Size = new System.Drawing.Size(98, 48);
+            this.button5.TabIndex = 18;
+            this.button5.Text = "REFRESH";
             this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(280, 345);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 48);
-            this.button6.TabIndex = 15;
-            this.button6.Text = "XÓA";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(377, 345);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 48);
-            this.button7.TabIndex = 16;
-            this.button7.Text = "SỬA";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
+            this.Controls.Add(this.btn_RESET);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txbKhoa);
             this.Controls.Add(this.txbDiem);
@@ -233,9 +259,11 @@
         private System.Windows.Forms.TextBox txbDiem;
         private System.Windows.Forms.TextBox txbKhoa;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btn_RESET;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
     }
 }
 

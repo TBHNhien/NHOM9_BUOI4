@@ -1,0 +1,87 @@
+﻿CREATE DATABASE QUANLYSINHVIEN
+GO
+
+CREATE TABLE STUDENT
+(
+	STUDENTID NVARCHAR (20) PRIMARY KEY ,
+	FULLNAME NVARCHAR (200) ,
+	AVERAGESCORE FLOAT ,
+	FacultyId INT FOREIGN KEY (FacultyId) REFERENCES FACULTY(FacultyId)
+)
+
+--ALTER TABLE STUDENT
+--ADD CONSTRAINT CHK_FULLNAME_NotNull CHECK (FULLNAME IS NOT NULL);
+
+CREATE TABLE FACULTY 
+(
+	FACULTYID INT PRIMARY KEY,
+	FACULTYNAME NVARCHAR (200)
+)
+
+ALTER TABLE FACULTY
+ADD TotalProfessor INT NULL
+
+
+ALTER TABLE STUDENT
+ADD CONSTRAINT Fk_Student_Faculty FOREIGN KEY (FACULTYID) REFERENCES FACULTY(FACULTYID)
+
+
+INSERT INTO STUDENT VALUES (1611061916 , N'NGUYỄN TRẦN HOÀNG LAN' , 4.5 , 1),
+(1711060596 , N'ĐÀM MINH ĐỨC ' , 2.5 , 1),
+(1711061004 , N'NGUYỄN QUỐC AN' , 4.5 , 1)
+
+CREATE PROC USP_THEMSV @ID nvarchar(20) , @TEN nvarchar(200) , @DIEM float ,@MAKHOA int
+AS
+	BEGIN 
+	INSERT INTO STUDENT VALUES (@ID , @TEN , @DIEM , @MAKHOA) 
+	END
+
+
+EXEC USP_THEMSV 1,NHIÊN,9,1
+
+ALTER PROC USP_SUASV @ID nvarchar(20) , @TEN nvarchar(200) , @DIEM float ,@MAKHOA int
+AS
+	BEGIN 
+	UPDATE STUDENT
+	SET FULLNAME = @TEN,
+		AVERAGESCORE = @DIEM,
+		FacultyId = @MAKHOA
+	WHERE STUDENTID = @ID
+	
+		-- Lấy số dòng bị ảnh hưởng bởi câu lệnh UPDATE
+		DECLARE @RowCount INT;
+		SET @RowCount = @@ROWCOUNT;
+
+		IF @RowCount = 0
+		BEGIN
+			-- Nếu không tìm thấy dòng nào có ID tương ứng, báo lỗi
+			RAISERROR('Không tìm thấy dòng có ID = %s trong bảng SINHVIEN.', 16, 1, @ID);
+		END
+	END
+
+CREATE PROC USP_XOASV
+    @ID nvarchar(20)
+AS
+BEGIN
+    DECLARE @RowCount INT;
+
+    DELETE FROM STUDENT
+    WHERE STUDENTID = @ID;
+
+    -- Lấy số dòng bị ảnh hưởng bởi câu lệnh DELETE
+    SET @RowCount = @@ROWCOUNT;
+
+    IF @RowCount = 0
+    BEGIN
+        -- Nếu không tìm thấy sinh viên có ID tương ứng, báo lỗi
+        RAISERROR('Không tìm thấy sinh viên có ID = %s trong bảng SINHVIEN.', 16, 1, @ID);
+    END
+END
+
+
+EXEC USP_SUASV 6,N'NHIEN',9,1
+
+
+
+
+
