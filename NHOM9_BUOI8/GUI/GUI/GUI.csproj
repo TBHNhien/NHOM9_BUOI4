@@ -95,5 +95,10 @@
       <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="ImageSource\1234567890.jpg" />
+    <Content Include="ImageSource\1234567891.jpg" />
+    <Content Include="ImageSource\1234567892.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

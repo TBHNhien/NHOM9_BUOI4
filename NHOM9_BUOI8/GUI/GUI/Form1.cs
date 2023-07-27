@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
+using System.IO;
 
 namespace GUI
 {
@@ -56,8 +57,19 @@ namespace GUI
                 int index = dtgvQLSV.Rows.Add();
                 dtgvQLSV.Rows[index].Cells[0].Value = s.STUDENTID;
                 dtgvQLSV.Rows[index].Cells[1].Value = s.FULLNAME;
-                dtgvQLSV.Rows[index].Cells[2].Value = s.AVERAGESCORE;
-                dtgvQLSV.Rows[index].Cells[3].Value = s.FACULTY.FACULTYNAME;
+                dtgvQLSV.Rows[index].Cells[2].Value = s.FACULTY.FACULTYNAME;
+                dtgvQLSV.Rows[index].Cells[3].Value = s.AVERAGESCORE;
+
+                //dtgvQLSV.Rows[index].Cells[4].Value = s.MAJOR.MAJORID;
+
+                if (s.MAJOR != null)
+                {
+                    dtgvQLSV.Rows[index].Cells[4].Value = s.MAJOR.MAJORID;
+                }
+                else
+                {
+                    dtgvQLSV.Rows[index].Cells[4].Value = "";
+                }
                 
             }
 
@@ -103,8 +115,44 @@ namespace GUI
                 txbDTB.Text = selectedRow.Cells[2].Value.ToString();
                 cmbKhoa.Text = selectedRow.Cells[3].Value.ToString();
 
+                string imagePath = string.Format("{0}.jpg", txbMaSV.Text);
+                string fullImagePath = Path.Combine(Application.StartupPath, "ImageSource", imagePath);
+                pic.Image = new Bitmap(fullImagePath);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //pic.Image = new Bitmap(Application.StartupPath + "\\ImageSource\\1234567890.jpg");
+
+            string imagePath = (Application.StartupPath + "\\ImageSource\\1234567890.jpg");
+
+            if (File.Exists(imagePath))
+            {
+                pic.Image = new Bitmap(imagePath);
+                MessageBox.Show("Tập tin ảnh này tồn tại.");
 
             }
+            else
+            {
+                // Xử lý tập tin không tồn tại
+                MessageBox.Show("Tập tin ảnh không tồn tại.");
+            }
+        }
+
+        private void chkUnregisterMajor_CheckedChanged(object sender, EventArgs e)
+        {
+            var lS = new List<STUDENT>();
+            if (this.chkUnregisterMajor.Checked)
+                lS = StudentService.Instance.GetAllHasNoMajor();
+            else
+                lS = StudentService.Instance.GetAll();
+            Bind(lS);
+        }
+
+        private void dtgvQLSV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 

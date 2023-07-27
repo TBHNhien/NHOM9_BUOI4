@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pic = new System.Windows.Forms.PictureBox();
             this.cmbKhoa = new System.Windows.Forms.ComboBox();
             this.txbHoTen = new System.Windows.Forms.TextBox();
             this.txbMaSV = new System.Windows.Forms.TextBox();
@@ -43,13 +45,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dtgvQLSV = new System.Windows.Forms.DataGridView();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.chkUnregisterMajor = new System.Windows.Forms.CheckBox();
             this.MASV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HOTEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KHOA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DIEMTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CHUYENNGANH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvQLSV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,6 +80,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.pic);
             this.panel1.Controls.Add(this.cmbKhoa);
             this.panel1.Controls.Add(this.txbHoTen);
             this.panel1.Controls.Add(this.txbMaSV);
@@ -90,6 +95,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(316, 364);
             this.panel1.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(6, 281);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pic
+            // 
+            this.pic.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pic.ErrorImage")));
+            this.pic.Location = new System.Drawing.Point(111, 220);
+            this.pic.Name = "pic";
+            this.pic.Size = new System.Drawing.Size(202, 141);
+            this.pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic.TabIndex = 13;
+            this.pic.TabStop = false;
             // 
             // cmbKhoa
             // 
@@ -180,6 +205,7 @@
             this.dtgvQLSV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MASV,
             this.HOTEN,
+            this.KHOA,
             this.DIEMTB,
             this.CHUYENNGANH});
             this.dtgvQLSV.Location = new System.Drawing.Point(336, 74);
@@ -189,22 +215,18 @@
             this.dtgvQLSV.Size = new System.Drawing.Size(915, 364);
             this.dtgvQLSV.TabIndex = 4;
             this.dtgvQLSV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvQLSV_CellClick);
+            this.dtgvQLSV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvQLSV_CellContentClick);
             // 
-            // imageList1
+            // chkUnregisterMajor
             // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(1095, 48);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(166, 20);
-            this.checkBox1.TabIndex = 5;
-            this.checkBox1.Text = "Chưa ĐK chuyên ngành";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkUnregisterMajor.AutoSize = true;
+            this.chkUnregisterMajor.Location = new System.Drawing.Point(1095, 48);
+            this.chkUnregisterMajor.Name = "chkUnregisterMajor";
+            this.chkUnregisterMajor.Size = new System.Drawing.Size(166, 20);
+            this.chkUnregisterMajor.TabIndex = 5;
+            this.chkUnregisterMajor.Text = "Chưa ĐK chuyên ngành";
+            this.chkUnregisterMajor.UseVisualStyleBackColor = true;
+            this.chkUnregisterMajor.CheckedChanged += new System.EventHandler(this.chkUnregisterMajor_CheckedChanged);
             // 
             // MASV
             // 
@@ -215,10 +237,19 @@
             // 
             // HOTEN
             // 
+            this.HOTEN.FillWeight = 200F;
             this.HOTEN.HeaderText = "HOTEN";
             this.HOTEN.MinimumWidth = 6;
             this.HOTEN.Name = "HOTEN";
             this.HOTEN.Width = 125;
+            // 
+            // KHOA
+            // 
+            this.KHOA.FillWeight = 200F;
+            this.KHOA.HeaderText = "KHOA";
+            this.KHOA.MinimumWidth = 6;
+            this.KHOA.Name = "KHOA";
+            this.KHOA.Width = 125;
             // 
             // DIEMTB
             // 
@@ -229,6 +260,7 @@
             // 
             // CHUYENNGANH
             // 
+            this.CHUYENNGANH.FillWeight = 200F;
             this.CHUYENNGANH.HeaderText = "CHUYENNGANH";
             this.CHUYENNGANH.MinimumWidth = 6;
             this.CHUYENNGANH.Name = "CHUYENNGANH";
@@ -239,7 +271,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1263, 450);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.chkUnregisterMajor);
             this.Controls.Add(this.dtgvQLSV);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
@@ -250,6 +282,7 @@
             this.Load += new System.EventHandler(this.Form1_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvQLSV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -270,12 +303,14 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox chkUnregisterMajor;
         private System.Windows.Forms.TextBox txbHoTen;
         private System.Windows.Forms.ComboBox cmbKhoa;
+        private System.Windows.Forms.PictureBox pic;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn MASV;
         private System.Windows.Forms.DataGridViewTextBoxColumn HOTEN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KHOA;
         private System.Windows.Forms.DataGridViewTextBoxColumn DIEMTB;
         private System.Windows.Forms.DataGridViewTextBoxColumn CHUYENNGANH;
     }
