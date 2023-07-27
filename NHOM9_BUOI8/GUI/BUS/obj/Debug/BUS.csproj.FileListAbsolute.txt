@@ -1,0 +1,15 @@
+C:\Users\Admin\Desktop\Lap_Trinh_Moi_Truong_Window\LyThuyet\BUOI8_MOHINH3LOP\GUI\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Lap_Trinh_Moi_Truong_Window\LyThuyet\BUOI8_MOHINH3LOP\GUI\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Lap_Trinh_Moi_Truong_Window\LyThuyet\BUOI8_MOHINH3LOP\GUI\BUS\bin\Debug\BUS.dll.config
+C:\Users\Admin\Desktop\Lap_Trinh_Moi_Truong_Window\LyThuyet\BUOI8_MOHINH3LOP\GUI\BUS\bin\Debug\BUS.dll
+C:\Users\Admin\Desktop\Lap_Trinh_Moi_Truong_Window\LyThuyet\BUOI8_MOHINH3LOP\GUI\BUS\bin\Debug\BUS.pdb
+C:\Users\Admin\Desktop\Lap_Trinh_Moi_Truong_Window\LyThuyet\BUOI8_MOHINH3LOP\GUI\BUS\bin\Debug\DAL.dll
+C:\Users\Admin\Desktop\Lap_Trinh_Moi_Truong_Window\LyThuyet\BUOI8_MOHINH3LOP\GUI\BUS\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Desktop\Lap_Trinh_Moi_Truong_Window\LyThuyet\BUOI8_MOHINH3LOP\GUI\BUS\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Desktop\Lap_Trinh_Moi_Truong_Window\LyThuyet\BUOI8_MOHINH3LOP\GUI\BUS\bin\Debug\DAL.pdb
+C:\Users\Admin\Desktop\Lap_Trinh_Moi_Truong_Window\LyThuyet\BUOI8_MOHINH3LOP\GUI\BUS\bin\Debug\DAL.dll.config
+C:\Users\Admin\Desktop\Lap_Trinh_Moi_Truong_Window\LyThuyet\BUOI8_MOHINH3LOP\GUI\BUS\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Desktop\Lap_Trinh_Moi_Truong_Window\LyThuyet\BUOI8_MOHINH3LOP\GUI\BUS\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Desktop\Lap_Trinh_Moi_Truong_Window\LyThuyet\BUOI8_MOHINH3LOP\GUI\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\Admin\Desktop\Lap_Trinh_Moi_Truong_Window\LyThuyet\BUOI8_MOHINH3LOP\GUI\BUS\obj\Debug\BUS.dll
+C:\Users\Admin\Desktop\Lap_Trinh_Moi_Truong_Window\LyThuyet\BUOI8_MOHINH3LOP\GUI\BUS\obj\Debug\BUS.pdb
