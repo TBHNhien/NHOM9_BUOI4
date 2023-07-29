@@ -107,7 +107,7 @@ namespace GUI
             int rowIndex = e.RowIndex;
 
             //kiểm tra nếu chỉ số dòng hợp lệ
-            if (rowIndex >= 0 && rowIndex < dtgvQLSV.Rows.Count)
+            if (rowIndex >= 0 && rowIndex < dtgvQLSV.Rows.Count-1)
             {
                 DataGridViewRow selectedRow = dtgvQLSV.Rows[rowIndex];
                 txbMaSV.Text = selectedRow.Cells[0].Value.ToString();
@@ -118,6 +118,10 @@ namespace GUI
                 string imagePath = string.Format("{0}.jpg", txbMaSV.Text);
                 string fullImagePath = Path.Combine(Application.StartupPath, "ImageSource", imagePath);
                 pic.Image = new Bitmap(fullImagePath);
+            }
+            else
+            {
+                MessageBox.Show("lỗi ngoài vùng chọn");
             }
         }
 
